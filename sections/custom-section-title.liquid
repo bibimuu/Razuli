@@ -1,0 +1,97 @@
+{{ 'custom-section-title.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{%- endstyle -%}
+
+{% liquid
+  if section.settings.caption == '私たちについて'
+    assign cssClassCenter = 'title-both-center'
+    assign cssClassCircle = 'circle-none'
+  else
+    assign cssClassCenter = 'title-both'
+    assign cssClassCircle = 'circle'
+  endif
+%}
+
+<section class="title-section">
+  <div class="{{ cssClassCenter }}">
+    <div class="caption-box">
+      <div class="{{ cssClassCircle }}"></div>
+      <p class="caption">{{ section.settings.caption }}</p>
+    </div>
+    <div class="title-and-link-box">
+      <h1 class="title">{{ section.settings.title }}</h1>
+
+      {% if section.settings.link == blank %}
+        <a href="{{section.settings.url}}" class="link-box">
+          {{ section.settings.link }}
+        </a>
+      {% else %}
+        <a href="{{section.settings.url}}" class="link-box">
+          {{ section.settings.link }}
+          <img class="arrow" loading="lazy" height="24" width="24" src="{{"arrow-small-right.svg" | asset_url}}">
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "section-title",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "title"
+    },
+    {
+      "type": "text",
+      "id": "caption",
+      "label": "caption"
+    },
+    {
+      "type": "text",
+      "id": "link",
+      "label": "link"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "url"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "section-title",
+      "settings": {
+        "title": "section-title"
+      }
+    }
+  ]
+}
+{% endschema %}

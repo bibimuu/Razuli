@@ -1,0 +1,133 @@
+a {
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
+.blog-section {
+  font-family:ipaexmincho;
+  color:#0D4648;
+  padding: 64px 50px;
+}
+
+.blog-module{
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-right: -50px;
+}
+
+.blog-module::-webkit-scrollbar{
+  display: none;
+}
+
+.blog-box{
+  border-left:solid 1px #0D4648;
+  max-width:280px;
+  margin-right: 96px;
+}
+
+.blog-date-style{
+  border-bottom:solid 1px #0D4648;
+  padding:0 0 8px 8px;
+  margin:0;
+  font-size:14px;
+  letter-spacing:0.1rem;
+  line-height:100%;
+}
+
+.blog-titile-style{
+  padding:16px 0 16px 8px;
+  font-size:18px;
+  height: calc(28.8px * 3 + 32px);
+  letter-spacing:0.1rem;
+  line-height:160%;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* 制限したい行数が3の場合 */
+  overflow: hidden;
+  text-decoration: none;
+  color: #0D4648;
+}
+
+.blog-img-style{
+   width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border:solid 1px #0D4648;
+  border-left:0;
+}
+
+.blog-img-box{
+  position:relative;
+}
+
+.blog-number{
+  font-size:41px;
+  line-height:160%;
+  letter-spacing:0.1rem;
+  background-color:#C3709A;
+  width:89px;
+  height:89px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#ffffff;
+  position:absolute;
+  top:24px;
+  right:-56px;
+}
+
+/* スクロール */
+
+.carousel-module{
+  margin-top:40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-box{
+  width: 33%;
+  position: relative;
+}
+
+.carousel-line-style{
+  height: 1px;
+  width: 100%;
+  display: block !important;
+  background-color: #0D4648;
+}
+
+.carousel-moveable-line-style{
+  display: block !important;
+  height: 4px;
+  width: 10%;
+  background-color: #48A0A4;
+  position: absolute;
+  top: -2px;
+}
+
+.arrow-prev {
+  padding-right:4px;
+}
+
+.prev-box{
+  display: flex;
+  align-items: center;
+  padding-right: 16px;
+  cursor: pointer;
+}
+
+.arrow-next {
+  padding-left:4px;
+}
+
+.next-box{
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+  cursor: pointer;
+}

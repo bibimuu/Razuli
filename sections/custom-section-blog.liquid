@@ -1,0 +1,49 @@
+{{ 'custom-section-blog.css' | asset_url | stylesheet_tag }}
+
+<section class="blog-section splide">
+  <div class="splide__track">
+    <ul class="blog-module splide__list">
+      {% for article in section.settings.blog.articles %}
+        <li class="blog-box splide__slide">
+          <p class="blog-date-style">{{ article.created_at | date: '%Y/%m/%d' }}</p>
+          <a href="{{ article.url }}">
+            <div class="blog-titile-style">{{ article.title }}</div>
+            <div class="blog-img-box">
+              <div class="blog-img-style">
+                <img loading="lazy" src="{{ article | image_url }}" width="279" height="278">
+              </div>
+              <div class="blog-number">0{{ forloop.index }}</div>
+            </div>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="carousel-module custom-slider">
+    <div class="prev-box">
+      <img class="arrow-prev" loading="lazy" height="24" width="24" src="{{ "arrow-small-left.svg" | asset_url }}">
+      <div>PREV</div>
+    </div>
+    <div class="carousel-box">
+      <div class="carousel-line-style"></div>
+      <div class="carousel-moveable-line-style"></div>
+    </div>
+    <div class="next-box">
+      <div>NEXT</div>
+      <img class="arrow-prev" loading="lazy" height="24" width="24" src="{{ "arrow-small-right.svg" | asset_url }}">
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "section-blog",
+  "settings": [
+    {
+      "type": "blog",
+      "id": "blog",
+      "label": "t.sections.featured-blog.settings.blog.label"
+    }
+  ]
+}
+{% endschema %}
