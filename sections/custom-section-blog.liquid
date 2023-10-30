@@ -19,8 +19,8 @@
       {% endfor %}
     </ul>
   </div>
-  <div class="carousel-module custom-slider">
-    <div class="prev-box">
+  <div class="carousel-module splide__arrows">
+    <div class="prev-box splide__arrow splide__arrow--prev">
       <img class="arrow-prev" loading="lazy" height="24" width="24" src="{{ "arrow-small-left.svg" | asset_url }}">
       <div>PREV</div>
     </div>
@@ -28,7 +28,7 @@
       <div class="carousel-line-style"></div>
       <div class="carousel-moveable-line-style"></div>
     </div>
-    <div class="next-box">
+    <div class="next-box splide__arrow splide__arrow--next">
       <div>NEXT</div>
       <img class="arrow-prev" loading="lazy" height="24" width="24" src="{{ "arrow-small-right.svg" | asset_url }}">
     </div>
@@ -43,6 +43,12 @@
       "type": "blog",
       "id": "blog",
       "label": "t.sections.featured-blog.settings.blog.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "section-blog",
+      "settings": {}
     }
   ]
 }

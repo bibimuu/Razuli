@@ -12,11 +12,14 @@ li{
   padding: 64px 50px;
 }
 
+.splide__track{
+  margin-right: -50px;
+}
+
 .blog-module{
   display: flex;
   overflow-x: scroll;
   overflow-y: hidden;
-  margin-right: -50px;
 }
 
 .blog-module::-webkit-scrollbar{
