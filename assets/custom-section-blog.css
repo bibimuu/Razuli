@@ -6,24 +6,25 @@ li{
   list-style: none;
 }
 
+button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+  font-family:ipaexmincho;
+  color:#0D4648;
+}
+
 .blog-section {
   font-family:ipaexmincho;
   color:#0D4648;
   padding: 64px 50px;
 }
 
-.splide__track{
-  margin-right: -50px;
-}
-
 .blog-module{
   display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-}
-
-.blog-module::-webkit-scrollbar{
-  display: none;
 }
 
 .blog-box{
@@ -56,7 +57,7 @@ li{
 }
 
 .blog-img-style{
-   width: 280px;
+  width: 280px;
   height: 280px;
   object-fit: cover;
   border:solid 1px #0D4648;
@@ -81,6 +82,17 @@ li{
   position:absolute;
   top:24px;
   right:-56px;
+}
+
+.pink-button{
+  padding: 30px 12px 30px 16px;
+  background-color: #C3709A;
+  color: white;
+  min-width: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 89px;
 }
 
 /* スクロール */
@@ -111,6 +123,7 @@ li{
   background-color: #48A0A4;
   position: absolute;
   top: -2px;
+  transition: left 0.5s ease;
 }
 
 .arrow-prev {
@@ -122,9 +135,14 @@ li{
   align-items: center;
   padding-right: 16px;
   cursor: pointer;
+  pointer-events: auto;
 }
 
 .arrow-next {
+  padding-left:4px;
+}
+
+.arrow-all{
   padding-left:4px;
 }
 
@@ -133,4 +151,33 @@ li{
   align-items: center;
   padding-left: 16px;
   cursor: pointer;
+  pointer-events: auto;
+}
+
+.carousel_area::-webkit-scrollbar{
+  display: none;
+}
+
+.carousel_area {
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  margin-right: -50px;
+  display: flex;
+  align-items: center;
+}
+
+.carousel_area__inner {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  transition: left 0.5s ease;
+  margin-left: -40px;
+  display: flex;
+  align-items: center;
+}
+
+.disable-button{
+  opacity: 0.4;
+  pointer-events: none;
 }

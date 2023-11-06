@@ -1,10 +1,10 @@
 {{ 'custom-section-blog.css' | asset_url | stylesheet_tag }}
 
-<section class="blog-section splide">
-  <div class="splide__track">
-    <ul class="blog-module splide__list">
-      {% for article in section.settings.blog.articles %}
-        <li class="blog-box splide__slide">
+<section class="blog-section">
+  <div class="carousel_area">
+    <ul class="blog-module carousel_area__inner">
+      {% for article in section.settings.blog.articles limit: 6 %}
+        <li class="blog-box">
           <p class="blog-date-style">{{ article.created_at | date: '%Y/%m/%d' }}</p>
           <a href="{{ article.url }}">
             <div class="blog-titile-style">{{ article.title }}</div>
@@ -17,21 +17,29 @@
           </a>
         </li>
       {% endfor %}
+      <a href="{{ section.settings.blog.url }}" class="pink-button"
+        >他のブログを見てみる<img
+          class="arrow-all"
+          loading="lazy"
+          height="24"
+          width="24"
+          src="{{ "arrow-small-right-white.svg" | asset_url }}"
+      ></a>
     </ul>
   </div>
-  <div class="carousel-module splide__arrows">
-    <div class="prev-box splide__arrow splide__arrow--prev">
+  <div class="carousel-module">
+    <button class="prev-box disable-button">
       <img class="arrow-prev" loading="lazy" height="24" width="24" src="{{ "arrow-small-left.svg" | asset_url }}">
       <div>PREV</div>
-    </div>
+    </button>
     <div class="carousel-box">
       <div class="carousel-line-style"></div>
       <div class="carousel-moveable-line-style"></div>
     </div>
-    <div class="next-box splide__arrow splide__arrow--next">
+    <button class="next-box">
       <div>NEXT</div>
-      <img class="arrow-prev" loading="lazy" height="24" width="24" src="{{ "arrow-small-right.svg" | asset_url }}">
-    </div>
+      <img class="arrow-next" loading="lazy" height="24" width="24" src="{{ "arrow-small-right.svg" | asset_url }}">
+    </button>
   </div>
 </section>
 
