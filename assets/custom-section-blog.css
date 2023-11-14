@@ -17,6 +17,11 @@ button{
   color:#0D4648;
 }
 
+h3{
+  font-weight: 400;
+  margin: 0;
+}
+
 .blog-section {
   font-family:ipaexmincho;
   color:#0D4648;
@@ -62,6 +67,12 @@ button{
   object-fit: cover;
   border:solid 1px #0D4648;
   border-left:0;
+}
+
+.blog-img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .blog-img-box{

@@ -5,12 +5,12 @@
     <ul class="blog-module carousel_area__inner">
       {% for article in section.settings.blog.articles limit: 6 %}
         <li class="blog-box">
-          <p class="blog-date-style">{{ article.created_at | date: '%Y/%m/%d' }}</p>
+          <div class="blog-date-style">{{ article.created_at | date: '%Y/%m/%d' }}</div>
           <a href="{{ article.url }}">
-            <div class="blog-titile-style">{{ article.title }}</div>
+            <h3 class="blog-titile-style">{{ article.title }}</h3>
             <div class="blog-img-box">
               <div class="blog-img-style">
-                <img loading="lazy" src="{{ article | image_url }}" width="279" height="278">
+                <img loading="lazy" src="{{ article | image_url }}" class="blog-img">
               </div>
               <div class="blog-number">0{{ forloop.index }}</div>
             </div>

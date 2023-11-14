@@ -1,0 +1,50 @@
+{{ 'custom-section-product.css' | asset_url | stylesheet_tag }}
+
+<section class="product-section">
+  <ul class="product-list">
+    {% for product in section.settings.collection.products limit: 8 %}
+      <li class="product-box">
+        <a href="{{ product.url }}">
+          <div class="product-img-box">
+            <img loading="lazy" src="{{ product | image_url }}" class="product-img">
+          </div>
+          <div>
+            <h3 class="product-title">{{ product.title }}</h3>
+            <div class="product-price">￥2,000</div>
+          </div>
+        </a>
+        <div class="product-line-style"></div>
+        <button class="buy-button">ADD CART</button>
+        {% render 'buy-buttons' %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+{% schema %}
+{
+  "name": "section-product",
+  "settings": [
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "min": 8,
+      "max": 24,
+      "step": 4,
+      "default": 16,
+      "label": "t:sections.main-collection-product-grid.settings.products_per_page.label"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "t.sections.main-collection.label"
+    }
+  ],
+  "presets": [
+    {
+      "name": "section-product",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}
