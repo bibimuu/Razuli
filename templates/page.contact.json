@@ -1,7 +1,17 @@
 {
   "sections": {
+    "4773d603-9979-47d2-a01d-94a906d44643": {
+      "type": "custom-section-title",
+      "settings": {
+        "title": "Contact",
+        "caption": "お問い合わせ",
+        "link": "",
+        "url": ""
+      }
+    },
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
         "padding_top": 36,
         "padding_bottom": 36
@@ -13,12 +23,13 @@
         "heading": "",
         "heading_size": "h1",
         "color_scheme": "background-1",
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 64,
+        "padding_bottom": 64
       }
     }
   },
   "order": [
+    "4773d603-9979-47d2-a01d-94a906d44643",
     "main",
     "form"
   ]

@@ -2,13 +2,115 @@
   "sections": {
     "main": {
       "type": "main-page",
+      "disabled": true,
       "settings": {
-        "padding_top": 28,
-        "padding_bottom": 28
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "aa60b9d5-3aac-4784-a5ac-d8b4628fa14e": {
+      "type": "custom-section-title",
+      "settings": {
+        "title": "About US",
+        "caption": "私たちについて",
+        "link": "",
+        "url": ""
+      }
+    },
+    "a1ba487e-ee65-4930-8ee1-b07a4fb4d253": {
+      "type": "rich-text",
+      "blocks": {
+        "5f1be21d-55c9-4fdf-bb8f-8875f88ecf09": {
+          "type": "caption",
+          "settings": {
+            "caption": "おしゃれなドッグウェアを求めている人のための犬服セレクトショップ",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "template--17028228448506__a1ba487e-ee65-4930-8ee1-b07a4fb4d253-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "For those seeking stylish dogwear, a curated canine fashion select shop",
+            "heading_size": "h2"
+          }
+        },
+        "template--17028228448506__a1ba487e-ee65-4930-8ee1-b07a4fb4d253-text-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>毎日、愛らしい子犬との生活を楽しんでいるあなたへ<\/strong><\/p><p>私たちは犬との特別な瞬間をより一層豊かにするおしゃれな犬服のセレクトショップです。<\/p><p>あなたの愛犬に幸せとハッピーなひと時を過ごせるような可愛い洋服を取り揃えております。<\/p>"
+          }
+        },
+        "template--17028228448506__a1ba487e-ee65-4930-8ee1-b07a4fb4d253-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "ドッグウェアを探しにいこう",
+            "button_link": "shopify:\/\/collections\/all",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "5f1be21d-55c9-4fdf-bb8f-8875f88ecf09",
+        "template--17028228448506__a1ba487e-ee65-4930-8ee1-b07a4fb4d253-heading-1",
+        "template--17028228448506__a1ba487e-ee65-4930-8ee1-b07a4fb4d253-text-1",
+        "template--17028228448506__a1ba487e-ee65-4930-8ee1-b07a4fb4d253-button-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "058d490f-42f5-4c5e-9a56-ea063ae86299": {
+      "type": "custom-section-title",
+      "settings": {
+        "title": "Recommend",
+        "caption": "おすすめ",
+        "link": "おすすめ商品を見る",
+        "url": "shopify:\/\/collections\/all"
+      }
+    },
+    "88dd4216-eac3-486a-8a5f-0e5eb512c71a": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "description": "",
+        "show_description": false,
+        "description_style": "body",
+        "collection": "おすすめ",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "full_width": false,
+        "show_view_all": false,
+        "view_all_style": "solid",
+        "enable_desktop_slider": false,
+        "color_scheme": "",
+        "image_ratio": "portrait",
+        "image_shape": "default",
+        "show_secondary_image": false,
+        "show_vendor": false,
+        "show_rating": false,
+        "enable_quick_add": true,
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     }
   },
   "order": [
-    "main"
+    "main",
+    "aa60b9d5-3aac-4784-a5ac-d8b4628fa14e",
+    "a1ba487e-ee65-4930-8ee1-b07a4fb4d253",
+    "058d490f-42f5-4c5e-9a56-ea063ae86299",
+    "88dd4216-eac3-486a-8a5f-0e5eb512c71a"
   ]
 }

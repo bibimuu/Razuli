@@ -5,38 +5,37 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "a8b0b626-5051-4860-9aa6-680818087d60": {
-          "type": "link_list",
-          "settings": {
-            "heading": "",
-            "menu": "footer"
-          }
-        },
         "6d3b6f78-ab2d-4b3a-b405-7e010fcd69d4": {
           "type": "link_list",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "heading": "",
+            "menu": "information"
           }
         }
       },
       "block_order": [
-        "a8b0b626-5051-4860-9aa6-680818087d60",
         "6d3b6f78-ab2d-4b3a-b405-7e010fcd69d4"
+      ],
+      "custom_css": [
+        ".footer-block {display: flex; flex-direction: column; align-items: flex-start; margin: 0;}",
+        ".footer__content-bottom {padding-top: 12px;}",
+        ".footer-block--newsletter {border-top: 1px solid #667677; padding-top: 32px; margin-top: 32px;}",
+        ".footer-block__heading {font-size: 14px;}",
+        ".footer__content-bottom-wrapper {\/* justify-content: center; *\/}"
       ],
       "settings": {
         "color_scheme": "inverse",
         "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
+        "newsletter_heading": "メールアドレス登録でお得な情報を手に入れよう。",
         "enable_follow_on_shop": true,
         "show_social": true,
         "enable_country_selector": true,
         "enable_language_selector": true,
-        "payment_enable": true,
+        "payment_enable": false,
         "show_policy": false,
         "margin_top": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 64,
+        "padding_bottom": 24
       }
     }
   },
